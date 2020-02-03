@@ -46,10 +46,10 @@ webserver:
       - app-network
       
 redis:
-        image: redis:alpine
+        image: bitnami/redis:latest
         container_name: redis
         volumes:
-          - ./redis/data:/bitnami/redis/data
+          - ./data/redis:/bitnami
         restart: always
         ports:
             - "6379:6379"
