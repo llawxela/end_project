@@ -44,3 +44,10 @@ webserver:
       - ./nginx-conf:/etc/nginx/conf.d
     networks:
       - app-network
+      
+redis:
+        image: redis:alpine
+        container_name: redis
+        restart: always
+        ports:
+            - "6379:6379"
